@@ -1,0 +1,3 @@
+A. a[k]
+B. when *y = *x ^ *y, *x was set as zero too.
+C. first <= last  ====>  first < last

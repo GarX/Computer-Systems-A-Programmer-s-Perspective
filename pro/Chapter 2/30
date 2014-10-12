@@ -1,0 +1,8 @@
+int tadd_ok(int x,int y) {
+	int z = x + y;
+	if(x < 0 && y < 0 && z >= 0)
+		return 0;
+	if(x > 0 && y > 0 && z <= 0)
+		return 0;
+	return 1;
+}

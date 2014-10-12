@@ -1,0 +1,3 @@
+A. It gives incorrect answer when t is stronger than s
+B. 1U - 2U > 0 
+C. return (int)(strlen(s)) - (int)(strlen(t)) > 0;

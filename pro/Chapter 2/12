@@ -1,0 +1,4 @@
+A. y = x & 0xFF
+B. y = (~ (x >> 2)) << 2 + x & 0xFF
+C. y = x | 0xFF
+

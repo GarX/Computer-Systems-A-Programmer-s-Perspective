@@ -1,0 +1,17 @@
+int tmult_ok(long long x,long long y){
+	int px = 0,py = 0;
+	if(x == 0 || y == 0)
+		return 1;
+	do{
+		if (x != 0)
+			px ++;
+		if (y != 0)
+			py ++;
+		x << 1;
+		y << 1;
+	} while(x != 0 || y != 0);
+	if (px + py - 1 > 64)
+		return 0;
+	else
+		return 1;
+}

@@ -1,0 +1,3 @@
+A. No. malloc(size_t) causes a conversion of long long to size_t
+B.  if(asize >= 4294967296)
+	return NULL;
