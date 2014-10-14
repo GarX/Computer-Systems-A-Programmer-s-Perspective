@@ -5,7 +5,6 @@ int tsub_ok(int x,int y){
 	
 	int l_mask = 0x0000FFFF;
 	int m_mask = ~(l_mask << (w - 16));
-	
 	y = -y;
 	int lx = l_mask & x;
 	int ly = l_mask & y;
@@ -22,4 +21,5 @@ int tsub_ok(int x,int y){
 
 int main(){
 	printf("%d\n",tsub_ok(0x7FFFFFFF,-1));
+	printf("%d\n",tsub_ok(1,0x80000000));
 }

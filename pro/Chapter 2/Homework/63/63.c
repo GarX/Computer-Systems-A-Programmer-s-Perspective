@@ -3,7 +3,8 @@
 unsigned srl(unsigned x,int k){
 	unsigned xsra = (int)x >> k;
 	int w = sizeof(int) << 3;
-	unsigned mask = ~((unsigned)-1 << (w - k));
+    unsigned all_one = -1;
+	unsigned mask = ~(all_one << (w - k));
 	return xsra & mask;
 }
 

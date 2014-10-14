@@ -1,11 +1,12 @@
 #include <stdio.h>
+#include <string.h>
 
-void copy_int(int val,void *buf,int maxbytes){
-	// size_t equals to unsigned
-	// maxbytes - sizeof(val) always equals to unsigned which >= 0
-	if(maxbytes - sizeof(val) >= 0)   
-		memcpy(buf,(void *)&val,sizeof(val));
-}
+//void copy_int(int val,void *buf,int maxbytes){
+//	// size_t equals to unsigned
+//	// maxbytes - sizeof(val) always equals to unsigned which >= 0
+//	if(maxbytes - sizeof(val) >= 0)
+//		memcpy(buf,(void *)&val,sizeof(val));
+//}
 
 void copy_int_new(int val,void *buf,int maxbytes){
 	if( ~(sizeof(val)) >= ~maxbytes){
