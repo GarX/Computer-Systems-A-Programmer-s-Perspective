@@ -11,7 +11,7 @@ int mul3div4(int x){
 
 int main(){
     int i;
-    for(i = 0;i <= 10;i ++){
+    for(i = -10;i <= 10;i ++){
       printf("%d\n",mul3div4(i));
     }
 }
