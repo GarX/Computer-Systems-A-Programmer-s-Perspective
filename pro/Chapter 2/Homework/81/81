@@ -1,0 +1,19 @@
+A. x = 0x0 y = 0x80000000
+((x < y) == (-x > -y)) = (0 == 1) = 0
+
+B. always yields 1
+
+C. always yields 1
+
+~x + x = -1
+~y + y = -1
+
+left = - 1 - x - 1 - y + 1 = - 1 - x - y
+right = - 1 - (x + y) = - 1 - x - y
+
+left = right
+
+D. always yields 1
+
+E. always yields 1
+
