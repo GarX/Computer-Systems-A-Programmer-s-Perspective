@@ -1,0 +1,3 @@
+A. xorl %edx, %edx is used to set the register to zero
+B. subl %edx, %edx
+C. 
