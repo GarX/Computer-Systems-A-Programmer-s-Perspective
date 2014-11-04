@@ -1,4 +1,4 @@
-A. 0x1B8 = 275
+A. 0x1B8 = 440
 B. 0x14 = 20
 C. 0xFFFFFE58 = -424
 D. 0xFFFFFE74 = -396
@@ -6,5 +6,5 @@ E. 0x44 = 68
 F. 0xFFFFFEC8 = -312
 G. 0x10 = 16
 H. 0xC = 12
-I. 0xFFFFFEEC = -275
+I. 0xFFFFFEEC = -276
 J. 0x20 = 32
