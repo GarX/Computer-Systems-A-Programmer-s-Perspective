@@ -1,0 +1,8 @@
+src_t                                   dest_t                                  instruction
+int                                     int                                     movl %eax,(%edx)
+char                                    int                                     movsbl %al,(%edx)
+char                                    unsigned                                movsbl %al,(%edx)
+unsigned char                           int                                     movzbl %al,(%edx)
+int                                     char                                    movb %al,(%edx)
+unsigned                                unsigned char                           movb &al,(%edx)
+unsigned                                int                                     movl %eax,(%edx)
