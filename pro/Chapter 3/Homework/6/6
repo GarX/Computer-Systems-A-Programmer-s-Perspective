@@ -1,0 +1,8 @@
+leal 6(%eax),%edx               x + 6
+leal (%eax,%ecx), %edx          x + y
+leal (%eax,%ecx,4), %edx        x + 4 * y
+leal 7(%eax,%eax,8), %edx       7 + 9 * x
+leal 0xA(,%ecx,4), %edx         10 + 4 * y
+leal 9(%eax,%ecx,2), %edx       9 + x + 2 * y
+
+

@@ -1,0 +1,7 @@
+Instruction                     Destination                 Value
+addl %ecx,(%eax)                0x100                       0x100
+subl %edx,4(%eax)               0x104                       0xA8
+imull $16,(%eax,%edx,4)         0x10C                       0x110
+incl 8(%eax)                    0x108                       0x14
+decl %ecx                       %ecx                        0x0
+subl %edx,%eax                  %eax                        0xFD
