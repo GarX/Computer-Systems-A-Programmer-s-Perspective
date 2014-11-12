@@ -1,0 +1,10 @@
+A.
+void cond(int a,int *p) {
+  if (!p || a <= 0)
+    goto done;
+  *p += a;
+done:
+}
+
+B. because the if contains two statement p and a > 0 to judge.
+

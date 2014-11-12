@@ -1,0 +1,25 @@
+A.
+Register            Variable            Initially
+%eax                x                   x
+%ecx                y                   y
+%edx                n                   n
+
+B. n > 0 =>  line 8. testl %edx, %edx
+   y < n =>  line 10. cmpl %edx, %ecx
+
+C.
+
+movl 8(%ebp), %eax              ; store x in %eax
+movl 12(%ebp), %ecx             ; store y in %ecx
+movl 16(%ebp), %edx             ; store n in %edx
+
+.L2:                            ; the loop starts
+addl %edx, %eax                 ; x += n;
+imull %edx, %ecx                ; y += n;
+subl $1, %edx                   ; n --;
+testl %edx, %edx                ; test %edx
+jle .L5                         ; break the loop when n <= 0
+cmpl %edx, %ecx                 ; compare y - n
+jl .L2                          ; goto the start of the loop when y - n < 0
+.L5:                            ; loop is finished
+

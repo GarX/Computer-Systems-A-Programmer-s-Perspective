@@ -1,0 +1,11 @@
+A.
+int fun_a(unsigned x) {
+  int val;
+  while(x != 0){
+    val = val ^ (x >> 1);
+  }
+  return val & 1;
+}
+
+B. It computes whether there is odd or even number of 1 in the x's binary expression
+

@@ -1,0 +1,10 @@
+A. je 8048296
+
+B. jb 8048366
+
+C. 804838c
+
+D. c5824880
+
+E. ff 25 means the instruction jmp
+   fc 9f 04 08 means the address 0x8049ffc

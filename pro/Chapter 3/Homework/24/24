@@ -1,0 +1,39 @@
+A.
+int sum = 0;
+int i = 0;
+if(i >= 10){
+  goto .end;
+}
+.start:
+if (i & 1){
+  goto .start;   // continue
+}
+sum += i;
+i ++;
+if (i < 10){
+  goto .start;
+}
+.end:
+
+continue may cause the loop variable not increased.
+
+
+B.
+int sum = 0;
+int i = 0;
+if(i >= 10){
+  goto .end;
+}
+.start:
+if (i & 1){
+  goto .continue;   // continue
+}
+sum += i;
+.continue:
+i ++;
+if (i < 10){
+  goto .start;
+}
+.end:
+
+

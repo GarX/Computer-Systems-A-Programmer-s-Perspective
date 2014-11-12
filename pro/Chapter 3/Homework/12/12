@@ -1,0 +1,12 @@
+A. long
+
+B.
+
+movl 12(%ebp), %eax                 ; store x in %eax
+movl 20(%ebp), %ecx                 ; sotre y's high 32 byte in %ecx
+imull %eax, %ecx                    ; multiply x and y's high byte and save the result in %ecx
+mull 16(%ebp)                       ; multiply x and y's low byte and save the result in %eax, and the carry is save in the %edx
+leal (%ecx, %edx), %edx             ; combine the carry and the high result in %edx.
+movl 8(%ebp), %ecx                  ; get the dest's address
+movl %eax, (%ecx)                   ; save the result's low byte in *dest
+movl %edx, 4(%ecx)                  ; save the result's high byte in *dest

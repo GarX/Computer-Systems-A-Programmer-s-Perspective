@@ -1,0 +1,12 @@
+A.
+int absdiff(int x,int y) {
+  int result;
+  if (x < y)
+    goto true;
+  result = x - y;
+  goto done;
+true: result = y - x;
+done:
+}
+
+B. transform t into !t is a complex work

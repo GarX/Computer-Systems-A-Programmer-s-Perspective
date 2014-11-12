@@ -1,0 +1,15 @@
+A.
+typedef int data_t
+#define COMP <
+
+B.
+typedef short data_t
+#define COMP >=
+
+C.
+typedef unsigned char data_t
+#define COMP <
+
+D.
+typedef int data_t
+#define COMP !=

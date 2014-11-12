@@ -1,0 +1,42 @@
+A. %edx equals to a + b. %edx is used to avoid the recalculate the a+b in the loop.
+
+B.
+Register            Variable                Initially
+%ecx                a                       a
+%ebx                b                       b
+%eax                result                  1
+%edx                -                       a + b
+
+C.
+
+movl 8(%ebp), %ecx              ; store a in %ecx
+movl 12(%ebp), %ebx             ; store b in %ebx
+movl $1, %eax                   ; treat %eax as result and set it as 1
+cmpl %ebx, %ecx                 ; compare a and b
+jge .L11                        ; skip the L12 loop while a - b >= 0 (!a < b)
+leal (%ebx, %ecx), %edx         ; set %edx as a + b
+movl $1, %eax                   ; set %eax(result) as 1
+.L12:
+imull %edx, %eax                ; do the multiplication as the statement 'result *= (a + b);' does
+addl $1, %ecx                   ; do the add as the statement 'a ++;'
+addl $1, %edx                   ; update the sum of a and b
+cmpl %ecx, %ebx                 ; compare a and b
+jg .L12                         ; do the L12 loop while b - a > 0 (a < b)
+.L11:
+
+D.
+int loop_while(int a, int b) {
+  int result = 1;
+  if (a >= b){
+    goto .L11
+  }
+  int sum = a + b;
+.L12:
+  result *= sum;
+  a ++;
+  sum ++;
+  if (a < b){
+    goto .L12
+  }
+.L11:
+}
