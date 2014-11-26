@@ -1,0 +1,9 @@
+A.
+#define OP * (x >= 0?3:1) /
+
+B.
+
+leal 3(%edx), %eax          ; eax = 3x
+testl %edx, %edx            ; test x
+cmovns %edx, %eax           ; if x >= 0 then set eax = x
+sarl $2,%eax                ; right shift eax by 2 bits. same as divided by 4

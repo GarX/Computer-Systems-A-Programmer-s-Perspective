@@ -1,0 +1,5 @@
+A. %eax get the address of the current instruction
+
+B. the call used here is just push the %eip onto the statk
+
+C. get the current instruction address
