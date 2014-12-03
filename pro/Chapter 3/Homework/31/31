@@ -1,0 +1,4 @@
+this is in the callee's procedure.
+
+ebc,esi,edi should be saved and eax,ecx,edx is modified.
+it is consistency.

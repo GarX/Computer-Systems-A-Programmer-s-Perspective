@@ -1,0 +1,18 @@
+A. %ebp is set to 0x80003C on line 3
+
+B. %esp is set to 0x800024 on line 4
+
+C. x is stored at 0x800038
+   y is stored at 0x800034
+
+D.      Memory          Address         Description
+        ...             0x800020        saved eip
+        ...             0x800024        pointer of string "%x %x" and the arg0 of scanf   %esp = 0x800024
+        0x800034        0x800028        &y and the arg1 of scanf
+        0x800038        0x80002C        &x and the arg2 of scanf
+        ...             0x800030        nothing
+        0x000046        0x800034        where y stores
+        0x000053        0x800038        where x stores
+        0x800060        0x80003C        saved ebp     %ebp = 0x80003C
+
+E. 0x800030 is not used by proc
