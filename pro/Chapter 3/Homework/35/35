@@ -1,0 +1,6 @@
+Array           Element size            Total size          Start address           Elelment i
+S               2                       14                  xS                      xS + 2 * i
+T               4                       12                  xT                      xT + 4 * i
+U               4                       24                  xU                      xU + 4 * i
+V               16                      128                 xV                      xV + 16 * i
+W               4                       16                  xW                      xW + 4 * i

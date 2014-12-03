@@ -1,0 +1,6 @@
+Expression          Type            Value                       Assembly code
+S + 1               short*          xS + 2                      leal (%edx,1,2), %eax
+S[3]                short           M[xS + 3 * 2]               movw (%edx,3,2), %ax
+&S[i]               short*          xS + 2 * i                  leal (%edx,%ecx,2), %eax
+S[4 * i + 1]        short           M[xS + (4 * i + 1) * 2]     movw 2(%edx,%ecx,8), %ax
+S + i - 5           short*          xS + 2 * (i - 5)            leal -10(%edx,%ecx,2), %eax
