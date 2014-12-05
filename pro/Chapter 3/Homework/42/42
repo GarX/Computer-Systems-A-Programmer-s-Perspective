@@ -1,0 +1,25 @@
+A. a : 0
+   b : 4
+   c : 8
+   d : 16
+   e : 20
+   f : 24
+   g : 32
+   h : 40
+
+B. 48 bytes
+
+C.
+
+struct {
+  char d;           // 0
+  char f;           // 1
+  short b;          // 2
+  float e;          // 4
+  char *a;          // 8
+  void *h;          // 12
+  double c;         // 16
+  long long g;      // 24
+}
+
+total size is 32 bytes
