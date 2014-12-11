@@ -1,0 +1,31 @@
+A.
+
+08 04 86 43 Return address
+bf ff fc 94 Last ebp                <- ebp
+00 00 00 02 Callee-saved edi
+00 00 00 03 Callee-saved esi
+00 00 00 01 Callee-saved ebx
+
+
+
+                                    <- esp
+
+B.
+
+
+08 04 86 43 Return address
+30 31 32 33 Last ebp                <- ebp
+36 37 38 39 Callee-saved edi
+32 33 34 35 Callee-saved esi
+38 39 30 31 Callee-saved ebx
+34 35 36 37
+30 31 32 33 result
+
+xx xx xx xx ebp-0x14 address of buf <- esp
+
+C. result
+
+D. edi esi and ebx
+
+E. strlen(buf) is more than 24
+   strcpy may copy wrong content to the result

@@ -1,0 +1,8 @@
+src_t               dest_t                  Instruction                 S                   D
+long                long                    movq                        %rdi                %rax
+int                 long                    movslq                      %edi                %rax
+char                long                    movsbq                      %dil                %rax
+unsigned int        unsigned long           movzlq                      %edi                %rax
+unsigned char       unsigned long           movzbq                      %dil                %rax
+long                int                     movl                        %edi                %eax
+unsigned long       unsigned                movl                        %edi                %eax

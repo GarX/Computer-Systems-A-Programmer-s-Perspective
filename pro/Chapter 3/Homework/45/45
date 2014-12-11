@@ -1,0 +1,15 @@
+A.
+
+Without protector
+
+buf             ebp - 20
+v               ebp - 8
+
+With protector
+
+buf             ebp - 20
+v               ebp - 24
+canary value    ebp - 8
+
+B. more closer to canary value, more safety the memory is.
+
